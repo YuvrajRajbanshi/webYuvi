@@ -1,83 +1,117 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { RxCross1 } from "react-icons/rx";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { MdDarkMode } from "react-icons/md";
 import { CiSun } from "react-icons/ci";
+import { RxCross1 } from "react-icons/rx";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
-
-  useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const handleThemeSwitch = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
-  };
+  const [darkMode, setDarkMode] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   return (
-    <div className="relative">
-      <div className={`text-center top-0 sticky bg-gray-700 ${theme} `}>
-        <nav
-          className={`md:flex md:items-center md:justify-around bg-gray-700 text-white p-5 ${
-            isMenuOpen ? "block" : "hidden"
-          } md:block`}
-        >
-          <ul className="flex  gap-3 flex-col  md:text-[17px] md:flex-row ">
+    <>
+      <nav className="dark:bg-black bg-slate-500 dark:text-white p-4">
+        <div className="flex items-center justify-between md:justify-around ">
+          <div className="dark:bg-black dark:text-white text-2xl font-bold ">
+            {" "}
+            Logo
+          </div>
+
+          <div className="md:hidden flex items-center gap-4 p-2">
+            {isMenuOpen ? (
+              <RxCross1
+                className=" text-white text-2xl cursor-pointer"
+                onClick={toggleMenu}
+              />
+            ) : (
+              <GiHamburgerMenu
+                className=" text-white text-2xl cursor-pointer"
+                onClick={toggleMenu}
+              />
+            )}
+
+            {darkMode ? (
+              <CiSun
+                className=" text-2xl cursor-pointer"
+                onClick={() => {
+                  setDarkMode(!darkMode);
+                }}
+              />
+            ) : (
+              <MdDarkMode
+                className=" text-2xl cursor-pointer"
+                onClick={() => {
+                  setDarkMode(!darkMode);
+                }}
+              />
+            )}
+          </div>
+
+          <ul className="hidden md:flex gap-5 ">
+            <Link to="/" className="">
+              Home
+            </Link>
+            <Link to="/about">About</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="/projects">Projects</Link>
+
+            {darkMode ? (
+              <CiSun
+                className=" text-2xl cursor-pointer"
+                onClick={() => {
+                  setDarkMode(!darkMode);
+                }}
+              />
+            ) : (
+              <MdDarkMode
+                className=" text-2xl cursor-pointer"
+                onClick={() => {
+                  setDarkMode(!darkMode);
+                }}
+              />
+            )}
+          </ul>
+        </div>
+
+        {/* Small screeen */}
+
+        {isMenuOpen ? (
+          <ul className=" md:hidden flex flex-col items-center  gap-2 text-white">
             <li>
-              <Link to="/" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/" className="   ">
+                {" "}
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={() => setIsMenuOpen(false)}>
-                About
-              </Link>
+              <Link to="/about">About </Link>
             </li>
             <li>
-              <Link to="/project" onClick={() => setIsMenuOpen(false)}>
-                Project
-              </Link>
+              <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                Contact
-              </Link>
+              <Link to="/projects">Projects</Link>
             </li>
           </ul>
-          <div className="flex items-center justify-center flex-col gap-4 md:flex-row md:gap-2">
-            <button className="outline p-1 rounded-sm hover:bg-red-700 transition duration-500 mt-4 hover:text-gray-600">
-              Resume
-            </button>
-            <MdDarkMode
-              className="text-3xl md:mt-4 cursor-pointer"
-              onClick={handleThemeSwitch}
-            />
-            <RxCross1
-              className="md:hidden cursor-pointer"
-              onClick={toggleMenu}
-            />
-          </div>
-        </nav>
-      </div>
-      {!isMenuOpen && (
-        <GiHamburgerMenu
-          className="cursor-pointer text-black text-2xl absolute right-10 top-5 md:hidden "
-          onClick={toggleMenu}
-        />
-      )}
-    </div>
+        ) : (
+          <></>
+        )}
+      </nav>
+    </>
   );
-};
+}
 
-export default Navbar;
+export default App;
