@@ -6,7 +6,17 @@ export default {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        moveLeftRight: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(20px)' },
+        },
+      },
+      animation: {
+        'move-left-right': 'moveLeftRight 2s infinite',
+      },
+    },
   },
   plugins: [],
 }

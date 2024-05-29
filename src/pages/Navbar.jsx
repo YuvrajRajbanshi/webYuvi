@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -23,22 +23,19 @@ function App() {
 
   return (
     <>
-      <nav className="dark:bg-black bg-slate-500 dark:text-white p-4">
+      <nav className="dark:bg-gray-300 dark:text-black bg-slate-500 p-4">
         <div className="flex items-center justify-between md:justify-around ">
-          <div className="dark:bg-black dark:text-white text-2xl font-bold ">
-            {" "}
-            Logo
-          </div>
+          <div className=" dark:text-black text-2xl font-bold "> Logo</div>
 
-          <div className="md:hidden flex items-center gap-4 p-2">
+          <div className="md:hidden   flex items-center gap-4 p-2">
             {isMenuOpen ? (
               <RxCross1
-                className=" text-white text-2xl cursor-pointer"
+                className=" text-white text-2xl cursor-pointer  dark:text-black"
                 onClick={toggleMenu}
               />
             ) : (
               <GiHamburgerMenu
-                className=" text-white text-2xl cursor-pointer"
+                className=" text-white text-2xl cursor-pointer   dark:text-black"
                 onClick={toggleMenu}
               />
             )}
@@ -60,17 +57,15 @@ function App() {
             )}
           </div>
 
-          <ul className="hidden md:flex gap-5 ">
-            <Link to="/" className="">
-              Home
-            </Link>
+          <ul className="hidden md:flex gap-5 dark:bg-gray-300 dark:text-black">
+            <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/contact">Contact</Link>
             <Link to="/projects">Projects</Link>
 
             {darkMode ? (
               <CiSun
-                className=" text-2xl cursor-pointer"
+                className=" text-2xl cursor-pointer  "
                 onClick={() => {
                   setDarkMode(!darkMode);
                 }}
@@ -89,7 +84,7 @@ function App() {
         {/* Small screeen */}
 
         {isMenuOpen ? (
-          <ul className=" md:hidden flex flex-col items-center  gap-2 text-white">
+          <ul className=" md:hidden flex flex-col items-center  gap-2  dark:text-black">
             <li>
               <Link to="/" className="   ">
                 {" "}
