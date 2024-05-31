@@ -1,9 +1,14 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Typewriter from "typewriter-effect";
-import back from "../../public/photos/back.png";
-import front from "../../public/photos/front.png";
-import yuvraj from "../../public/photos/yuvi.png";
+import Photos from "./Photos";
+import About from "./About";
+import { CiGlobe } from "react-icons/ci";
+import { TbCrown } from "react-icons/tb";
+import { SiBackendless } from "react-icons/si";
+import SkillCards from "./skill/SkillCards";
+import ProjectsCard from "./projects/ProjectsCard";
+
 const Home = () => {
   return (
     <div className="dark:text-white dark:bg-[#2f2f2f] ">
@@ -35,25 +40,55 @@ const Home = () => {
             unde vitae deserunt est ipsam distinctio voluptates quaerat! Minima
             vel, similique doloremque repellat
           </p>
+          <div className=" flex  items-center gap-6">
+            <h1>gihub</h1>
+            <h1>Linkdin</h1>
+            <h1>Leetcode</h1>
+          </div>
         </div>
       </div>
+      <Photos />
 
-      <div className="flex items-center justify-center mt-12 ">
-        <img
-          src={back}
-          className="w-[40%] absolute  animate-move-left-right md:w-[20%] md:right-40 md:bottom-[275px]"
-          alt=""
+      <div>
+        <h1 className=" text-center  font-semibold  mt-40 md:text-4xl text-2xl font-mono  ">
+          Services
+        </h1>
+      </div>
+      <div className="md:flex items-center justify-center md:gap-20 flex-wrap">
+        <SkillCards
+          skills={"Hi, I am yuvraj. I am a front end developer "}
+          icons={<CiGlobe />}
+          technology={"Web Development"}
         />
-        <img
-          src={front}
-          className="w-[35%] mt-5 absolute md:w-[16%] md:right-40 md:bottom-[275px] "
-          alt=""
+
+        <SkillCards
+          skills={
+            "Hi, I am yuvraj. I am a front end developer I can be good coder in futute "
+          }
+          icons={<TbCrown />}
+          technology={"UI/UX Design"}
         />
-        <img
-          src={yuvraj}
-          className="w-[35%] bottom-11 mt-5 mix-blend-normal absolute md:w-[16%] md:right-40 md:bottom-[275px]"
-          alt=""
+        <SkillCards
+          skills={"Hi, I am yuvraj. I am a front end developer "}
+          icons={<SiBackendless />}
+          technology={"Database"}
         />
+        <SkillCards
+          skills={"Hi, I am yuvraj. I am a front end developer "}
+          icons={<SiBackendless />}
+          technology={"Database"}
+        />
+      </div>
+      <h1 className=" text-center md:text-4xl text-2xl font-mono font-semibold mt-20">
+        Projects
+      </h1>
+
+      <div className="md:flex justify-center items-center flex-wrap gap-24 mx-7">
+        <ProjectsCard />
+        <ProjectsCard />
+        <ProjectsCard />
+        <ProjectsCard />
+        <ProjectsCard />
       </div>
     </div>
   );
