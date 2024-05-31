@@ -83,7 +83,7 @@ const Home = () => {
         Projects
       </h1>
 
-      <div className="md:flex justify-center items-center flex-wrap gap-24 mx-7">
+      <div className="md:flex justify-center items-center flex-wrap gap-24 mx-7 p-5">
         <ProjectsCard />
         <ProjectsCard />
         <ProjectsCard />
