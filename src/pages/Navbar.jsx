@@ -60,7 +60,7 @@ function App() {
           <ul className="hidden md:flex gap-5 dark:bg-gray-300 dark:text-black">
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/certificate">Certificate</Link>
             <Link to="/projects">Projects</Link>
 
             {darkMode ? (

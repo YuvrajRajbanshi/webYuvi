@@ -1,7 +1,7 @@
 import React from "react";
-import back from "../../public/photos/back.png";
-import front from "../../public/photos/front.png";
-import yuvraj from "../../public/photos/yuvi.png";
+import back from "/photos/back.png";
+import front from "/photos/front.png";
+import yuvraj from "/photos/yuvi.png";
 
 const Photos = () => {
   return (
@@ -18,7 +18,7 @@ const Photos = () => {
       />
       <img
         src={yuvraj}
-        className="w-[35%] bottom-11 mt-5 mix-blend-normal absolute md:w-[16%] md:right-40 md:bottom-[275px]"
+        className="w-[35%] mt-5  absolute md:w-[16%] md:right-40 md:bottom-[275px]"
         alt=""
       />
     </div>

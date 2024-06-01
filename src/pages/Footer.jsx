@@ -9,7 +9,7 @@ import { FaFacebook } from "react-icons/fa";
 import { SiGeeksforgeeks } from "react-icons/si";
 const Footer = () => {
   return (
-    <div className="dark:text-white dark:bg-gray-700 p-10  ">
+    <div className=" dark:bg-gray-700 bg-[#2f2f2f] text-white p-10  ">
       <div className=" flex items-center justify-center gap-5 ">
         <div className="   items-center justify-center gap-4">
           <div className=" flex items-center gap-8">
