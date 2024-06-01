@@ -1,12 +1,10 @@
 import React from "react";
-
-import { CiGlobe } from "react-icons/ci";
-import { TbCrown } from "react-icons/tb";
-
-import { SiBackendless } from "react-icons/si";
 import Typewriter from "typewriter-effect";
 import Photos from "../Photos";
-import { BiLogoNetlify } from "react-icons/bi";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareInstagram } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const AboutSkills = () => {
   return (
@@ -33,16 +31,23 @@ const AboutSkills = () => {
               />
             </span>
           </h1>
-          <p className="md:w-[60%] w-[90%]">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis,
-            repellat rerum! Perspiciatis facilis minima provident laboriosam,
-            unde vitae deserunt est ipsam distinctio voluptates quaerat! Minima
-            vel, similique doloremque repellat
+          <p className="md:w-[60%] w-[90%] font-mono">
+            I am passionate about developing efficient and scalable software
+            solutions. My goal is to become a proficient software engineer who
+            can contribute to impactful projects and continuously learn and grow
+            in the field. I am particularly interested in web development and
+            artificial intelligence.
           </p>
-          <div className=" flex  items-center gap-6">
-            <h1>gihub</h1>
-            <h1>Linkdin</h1>
-            <h1>Leetcode</h1>
+          <div className=" flex  items-center gap-6 mt-4">
+            <Link to="https://github.com/YuvrajRajbanshi">
+              <FaGithub />
+            </Link>
+            <Link to="https://www.linkedin.com/in/yuvraj-singh-893845259/">
+              <FaLinkedin />
+            </Link>
+            <Link to="https://www.instagram.com/yuvraj_singh_49/">
+              <FaSquareInstagram />
+            </Link>
           </div>
         </div>
       </div>

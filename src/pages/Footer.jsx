@@ -13,14 +13,25 @@ const Footer = () => {
       <div className=" flex items-center justify-center gap-5 ">
         <div className="   items-center justify-center gap-4">
           <div className=" flex items-center gap-8">
-            <FaLinkedin className=" cursor-pointer" />
-            <SiTwitter className=" cursor-pointer" />
-            <BsInstagram className=" cursor-pointer" />
+            <Link to="https://www.linkedin.com/in/yuvraj-singh-893845259/">
+              <FaLinkedin />
+            </Link>
+            <Link to="https://x.com/singhrajsingj?t=j6w4FfeoXhesAP2WUixeWQ&s=09">
+              <SiTwitter />
+            </Link>
+            <Link to="https://www.instagram.com/yuvraj_singh_49/">
+              <FaSquareInstagram />
+            </Link>
             <FaFacebook className=" cursor-pointer" />
           </div>
           <div className="flex items-center gap-8 mt-4">
-            <ImGithub className=" cursor-pointer" />
-            <SiLeetcode className=" cursor-pointer" />
+            <Link to="https://github.com/YuvrajRajbanshi">
+              <FaGithub />
+            </Link>
+            <Link to="https://leetcode.com/SinghRajYuvraj/">
+              <SiLeetcode />
+            </Link>
+
             <FaHackerrank className=" cursor-pointer" />
             <SiGeeksforgeeks className=" cursor-pointer" />
           </div>
