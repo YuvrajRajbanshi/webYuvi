@@ -8,11 +8,12 @@ import { TbCrown } from "react-icons/tb";
 import { SiBackendless } from "react-icons/si";
 import SkillCards from "./skill/SkillCards";
 import ProjectsCard from "./projects/ProjectsCard";
+import AboutSkills from "./AboutSkills/AboutSkills";
 
 const Home = () => {
   return (
     <div className="dark:text-white dark:bg-[#2f2f2f] ">
-      <About />
+      <AboutSkills />
 
       <div>
         <h1 className=" text-center  font-semibold  mt-40 md:text-4xl text-2xl font-mono  ">
