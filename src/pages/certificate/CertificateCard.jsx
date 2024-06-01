@@ -1,5 +1,5 @@
 import React from "react";
-import certificate1 from "/public/photos/certificate (1).jpg";
+import certificate1 from "/public/photos/certificate.jpg";
 const CertificateCard = () => {
   return (
     <div className=" mt-5">

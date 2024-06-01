@@ -62,6 +62,7 @@ function App() {
             <Link to="/about">About</Link>
             <Link to="/certificate">Certificate</Link>
             <Link to="/projects">Projects</Link>
+            <Link to="/login">Login</Link>
 
             {darkMode ? (
               <CiSun
@@ -99,6 +100,9 @@ function App() {
             </li>
             <li>
               <Link to="/projects">Projects</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
             </li>
           </ul>
         ) : (

@@ -19,6 +19,9 @@ export default {
       boxShadow: {
         'custom-black': '0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.5)',
       },
+      backgroundImage: {
+        'bg-image': "url('/src/Authentication/image.png')",
+      },
     },
   },
   plugins: [],
