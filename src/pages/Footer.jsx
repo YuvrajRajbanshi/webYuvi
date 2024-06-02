@@ -1,8 +1,6 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa6";
 import { SiTwitter } from "react-icons/si";
-import { BsInstagram } from "react-icons/bs";
-import { ImGithub } from "react-icons/im";
 import { SiLeetcode } from "react-icons/si";
 import { FaHackerrank } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
@@ -26,7 +24,9 @@ const Footer = () => {
             <Link to="https://www.instagram.com/yuvraj_singh_49/">
               <FaSquareInstagram />
             </Link>
-            <FaFacebook className=" cursor-pointer" />
+            <Link to="https://www.facebook.com/profile.php?id=100067533970603">
+              <FaFacebook />
+            </Link>
           </div>
           <div className="flex items-center gap-8 mt-4">
             <Link to="https://github.com/YuvrajRajbanshi">
@@ -35,9 +35,13 @@ const Footer = () => {
             <Link to="https://leetcode.com/SinghRajYuvraj/">
               <SiLeetcode />
             </Link>
+            <Link to="https://www.hackerrank.com/profile/Yuvraj_Singh347">
+              <FaHackerrank />
+            </Link>
 
-            <FaHackerrank className=" cursor-pointer" />
-            <SiGeeksforgeeks className=" cursor-pointer" />
+            <Link to="https://www.geeksforgeeks.org/user/singhrazkgh/">
+              <SiGeeksforgeeks />
+            </Link>
           </div>
         </div>
       </div>

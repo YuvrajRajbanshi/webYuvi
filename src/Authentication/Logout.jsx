@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-const Login = () => {
+const Logout = () => {
   const [sign, setSign] = useState("Sign In");
 
   return (
@@ -76,4 +76,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Logout;

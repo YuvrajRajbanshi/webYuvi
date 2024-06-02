@@ -3,7 +3,7 @@ import { MdDarkMode } from "react-icons/md";
 import { CiSun } from "react-icons/ci";
 import { RxCross1 } from "react-icons/rx";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,11 +58,56 @@ function App() {
           </div>
 
           <ul className="hidden md:flex gap-5 dark:bg-gray-300 dark:text-black">
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/certificate">Certificate</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/login">Login</Link>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-red-400" : ""
+                } transition duration-500 ease-in-out hover:text-red-400`
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-red-400" : ""
+                } transition duration-500 ease-in-out hover:text-red-400`
+              }
+              to="/about"
+            >
+              About
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-red-400" : ""
+                } transition duration-500 ease-in-out hover:text-red-400`
+              }
+              to="/certificate"
+            >
+              Certificate
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-red-400" : ""
+                } transition duration-500 ease-in-out hover:text-red-400`
+              }
+              to="/projects"
+            >
+              Projects
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                `${
+                  isActive ? "text-red-400" : ""
+                } transition duration-500 ease-in-out hover:text-red-400 `
+              }
+              to="/logout"
+            >
+              Logout
+            </NavLink>
 
             {darkMode ? (
               <CiSun
@@ -87,22 +132,30 @@ function App() {
         {isMenuOpen ? (
           <ul className=" md:hidden flex flex-col items-center  gap-2  dark:text-black">
             <li>
-              <Link to="/" className="   ">
+              <Link to="/" onClick={() => setIsMenuOpen(false)}>
                 {" "}
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about">About </Link>
+              <Link to="/about" onClick={() => setIsMenuOpen(false)}>
+                About{" "}
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                Certificate
+              </Link>
             </li>
             <li>
-              <Link to="/projects">Projects</Link>
+              <Link to="/projects" onClick={() => setIsMenuOpen(false)}>
+                Projects
+              </Link>
             </li>
             <li>
-              <Link to="/login">Login</Link>
+              <Link to="/logout" onClick={() => setIsMenuOpen(false)}>
+                Logout
+              </Link>
             </li>
           </ul>
         ) : (

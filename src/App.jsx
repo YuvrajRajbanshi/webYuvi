@@ -5,7 +5,7 @@ import Navbar from "./pages/Navbar";
 import Projects from "./pages/Projects";
 import Footer from "./pages/Footer";
 import Certifcate from "./pages/Certificate";
-import Login from "./Authentication/Login";
+import Logout from "./Authentication/Logout";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/certificate" element={<Certifcate />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
       </Routes>
       <Footer />
     </>

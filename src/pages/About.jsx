@@ -1,6 +1,9 @@
 import React from "react";
 import Language from "./language/Language";
 import AboutSkills from "./AboutSkills/AboutSkills";
+import Button from "./language/Button";
+import Language1 from "./language/Language1";
+import Language2 from "./language/Language2";
 
 const About = () => {
   return (
@@ -13,9 +16,9 @@ const About = () => {
           Skill
         </h1>
         <div className=" flex items-center  justify-center flex-wrap">
-          <Language />
-          <Language />
-          <Language />
+          <Language Technology={"Frontend"} />
+          <Language1 Technology={"Backend"} />
+          <Language2 Technology={"Others"} />
         </div>
       </div>
     </>
