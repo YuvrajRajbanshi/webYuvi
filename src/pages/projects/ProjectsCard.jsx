@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa";
 
 const ProjectsCard = ({ img, title, description, gitHubLink, webSiteLink }) => {
   return (
-    <div className=" mt-5">
+    <div className=" mt-5  hover:scale-110 transition-all ease-in-out">
       <div className=" flex items-center justify-center flex-wrap">
         <div className=" bg-gray-500 h-[300px] w-[300px] p-4  rounded-md">
           <img src={img} alt="" />

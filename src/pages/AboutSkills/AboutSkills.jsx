@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const AboutSkills = () => {
   return (
-    <div className=" dark:text-white dark:bg-[#2f2f2f] h-[80vh] md:h-[70vh]">
+    <div className=" dark:text-white dark:bg-[#2f2f2f] h-[80vh] md:h-[70vh] ">
       <div className="   flex items-center justify-center flex-col h-[60vh]  mx-auto w-[80%] md:w-[60%] ">
         <div>
           <h1 className="flex  items-start flex-col gap-3">
