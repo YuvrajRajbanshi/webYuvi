@@ -143,7 +143,7 @@ function App() {
               </Link>
             </li>
             <li>
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+              <Link to="/certificate" onClick={() => setIsMenuOpen(false)}>
                 Certificate
               </Link>
             </li>
