@@ -22,6 +22,7 @@ const AboutSkills = () => {
                     "Yuvraj Singh ",
                     "Web Developer ",
                     "UI/UX designer ",
+                    "Backend Developer ",
                     "Student",
                   ],
                   autoStart: true,

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Logout = () => {
   const [sign, setSign] = useState("Sign In");
+  const navigate = useNavigate();
 
   return (
     <div className="flex items-center justify-center h-[90vh] bg-gray-500 bg-bg-image ">
@@ -38,10 +40,17 @@ const Logout = () => {
                 type="password"
                 placeholder="Password "
                 className=" bg-transparent outline-white border-2 text-white text-2xl w-[100%] p-1 rounded"
+                required
               />
             </div>
           </div>
-          <button className=" bg-red-700 w-[100%]  px-1 py-2 rounded-sm font-bold text-xl mt-4">
+          <button
+            type="button"
+            className=" bg-red-700 w-[100%]  px-1 py-2 rounded-sm font-bold text-xl mt-4"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             {sign}
           </button>
 

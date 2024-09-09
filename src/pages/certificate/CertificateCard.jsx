@@ -1,7 +1,7 @@
 import React from "react";
-import certificate1 from "/public/photos/certificate.jpg";
-import certificate2 from "/public/photos/certificate.jpg";
-import certificate3 from "/public/photos/certificate.jpg";
+import certificate1 from "/photos/certificate.jpg";
+import certificate2 from "/photos/certificate.jpg";
+import certificate3 from "/photos/certificate.jpg";
 
 const CertificateCard = ({ photos, title, desc }) => {
   return (

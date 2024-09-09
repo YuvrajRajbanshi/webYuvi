@@ -17,8 +17,8 @@ const Language = ({ Technology }) => {
           <Button Name={"HTML"} logo={<FaHtml5 />} />
           <Button Name={"CSS"} logo={<SiCss3 />} />
           <Button Name={"Tailwind"} logo={<SiTailwindcss />} />
-          <Button Name={"Javascript"} logo={<IoLogoJavascript />} />
-          <Button Name={"React js"} logo={<RiReactjsFill />} />
+          <Button Name={"JavaScript"} logo={<IoLogoJavascript />} />
+          <Button Name={"React.js"} logo={<RiReactjsFill />} />
         </div>
       </div>
     </div>

@@ -18,7 +18,7 @@ const Language2 = ({ Technology, Name, Logo }) => {
           <Button Name={"Java"} logo={<FaJava />} />
           <Button Name={"Figma"} logo={<FaFigma />} />
           <Button Name={"VsCode"} logo={<VscVscode />} />
-          <Button Name={"GitHub"} logo={<VscVscode />} />
+          <Button Name={"GitHub"} logo={<FaGithub />} />
           <Button Name={"Netlify"} logo={<SiNetlify />} />
           <Button Name={"Vercel"} logo={<SiVercel />} />
         </div>
